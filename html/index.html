@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	
+		$('#submit').click(function(){
+			var teamDetails = new Object();
+			teamDetails.name = $('#name').val();
+			teamDetails.noOfPlayers = $('#size').val();
+			var jsonString = 'formData=' + JSON.stringify(teamDetails);
+			
+			$.ajax({
+			   type: "POST",
+			   url: "save
+			   Json.php", //the name and location of your php file
+			   data: jsonString
+			   });
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="teamList"></div>
+	<form id="teamReg">
+		Name: <input id="name" /><br /><br />
+		Number of players: <input id="size" /><br /><br />
+		<input type="button" id="submit" value="Register" />
+	</form>
+	</body>
+</html>
