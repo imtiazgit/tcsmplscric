@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Team Registration</title>
+</head>
+<body>
+	<h1>My Add Team Details</h1>
+      <h4 align = "right"> Registration Status: Unsubmitted</h4>
+      <div>
+      	<h3>Add Team Information</h3>
+         <table style="width:50%">
+            
+            <tr>
+               <td>Enter your team name:</td>
+               <td><input type ="text" id = "idTeamName"> </td>
+            </tr>
+            <tr>
+               <td><label for="tcsaccount">Select your TCS account</label></td>
+               <td>
+                  <select id = "idTCSAccount">
+                     <option value="Select">Select</option>
+                     <option value="Target">Target</option>
+                     <option value="Ameriprise">Ameriprise</option>
+                     <option value="Deluxe">Deluxe</option>
+                  </select>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label for="tlogo">Choose your team logo</label>
+               </td>
+               <td>
+                  <input type="file" id = "idBtnBrowse" value="browse" accept=".jpg,.jpeg">
+               </td>
+            </tr>
+         </table>
+         <br>
+         <table	 style="width:34%">
+            <tr>
+               <td>Team Manager</td>
+               <td>
+               		<input type ="text" id = "idTeamManager">
+              	</td>
+            </tr>
+            <tr>
+               <td>Team Coach</td>
+               <td><input type ="text" id = "idTeamCoach"> </td>
+            </tr>
+         </table>
+         <br>
+         <table style="width:34%">
+               
+            <tr>
+               <td>Team Captain</td>
+               <td><input type ="text" id = "idTeamCaptainName"> </td>
+            </tr>
+            <tr>
+               <td>Primary Contact Number</td>
+               <td> <input type ="text" id = "idTeamCaptainContactNumber"> </td>
+            </tr>
+            <tr>
+               <td>Primary email address</td>
+               <td><input type ="text" id = "idTeamCaptainEmailAddress"> </td>
+            </tr>
+         </table >
+         <br>
+         <table	 style="width:34%">
+            <tr>
+               <td>Team Vice-Captain</td>
+               <td> <input type ="text" id = "idTeamViceCaptainName"> </td>
+            </tr>
+            <tr>
+               <td>Primary Contact Number</td>
+               <td><input type ="text" id ="idTeamViceCaptainContactNumber"></td>
+            </tr>
+            <tr>
+               <td>Primary email address</td>
+               <td><input type ="text" id = "idTeamViceCaptainEmailAddress"></td>
+            </tr>
+         </table>
+         <br>
+         <br>
+         <input type="button" id = "idBtnSaveTeam" value="Save" onclick="SaveTeam()">
+         <input type="button" id = "idBtnCancel" value="Cancel" onclick="CancelTeam()">
+         <br>
+      </div>
+      <h3>Add Player Information</h3>
+      <div id="divPlayer">
+         <table style="width:60%" >            
+            <tr>
+               <td>Enter player name:</td>
+               <td> <input type ="text" name="namePlayerName" id="idPlayerName"> </td>
+               <td>	           
+                  <input type="checkbox" name="bat" value="Bat" id = "idBat"> Batsmen
+                  <input type="checkbox" name="bowl" value="Bowl" id = "idBowl"> Bowler
+                  <input type="checkbox" name="keep" value="Keep" id = "idKeep"> Wicket Keeper
+               </td>
+            </tr>
+         </table>
+         <input type="button" id = "AddPLayer" value="Add Players" onclick="AddPlayer()" >
+         <input type="button" id= "ClearPlayer" value="Clear">
+      </div>
+      <br>
+      <div id="divPlayerTable">
+         <table style="width:60%" id="tblPlayerTable">
+            <thead>
+               <tr>
+                  <th>Player Name</th>
+                  <th>Role</th>
+                  <th> View</th>
+                  <th> Delete</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+               <tr>
+                  <td><input type="button" value="Save" onclick="SavePlayers()"> 
+                     <input type="button" value="Cancel" onclick="CancelPlayers()">
+                  </td>
+               </tr>
+            </tfoot>
+         </table>
+      </div>
+      <p id="ErrSection"></p>
+	
+</body>
+<br>
+</html>
+<script src="script.js" type="text/javascript">
+</script>
